@@ -14,7 +14,21 @@ import { NotImplementedError } from '../extensions/index.js';
  * ]) => 3`
  *
  */
-export default function countCats(/* matrix */) {
-  throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
+
+export default function countCats( matrix ) {
+  let sum = 0;
+  for(let elem of matrix) {
+    for(let elem1 of elem) {
+      if(elem1 === '^^') {
+        sum+=1;
+      }
+    }
+  }
+  return sum;
 }
+
+console.log( countCats([
+  [0, 1, '^^'],
+  [0, '^^', 2],
+  ['^^', 1, 2]
+]));
