@@ -26,9 +26,3 @@ export default function countCats( matrix ) {
   }
   return sum;
 }
-
-console.log( countCats([
-  [0, 1, '^^'],
-  [0, '^^', 2],
-  ['^^', 1, 2]
-]));
